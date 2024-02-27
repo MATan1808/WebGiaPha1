@@ -1,0 +1,57 @@
+/* Định dạng cho các thẻ a và li trong thẻ ul có class là "nav" */
+.nav li a {
+    color: black;       /* Màu chữ đen */
+    font-size: 18px;    /* Kích thước chữ 18px */
+    margin-right: 20px; /* Khoảng cách phải giữa các mục menu */
+    text-decoration: none; /* Loại bỏ gạch chân */
+}
+
+/* Định dạng khi hover */
+.nav li a:hover {
+    color: blue;        /* Màu chữ khi di chuột qua */
+}
+.container-fluide {
+    position: relative;
+    z-index: 1; /* Đặt z-index để nằm trên cùng */
+}
+
+.container {
+    background-color: #ecde426a;
+}
+
+.logo {
+    margin-top: 20px; /* Để tránh đụng vào header */
+}
+
+.nav {
+    float: left;
+    margin-top: 20px; /* Để tránh đụng vào header */
+}
+
+.table-container {
+    margin-top: 20px; /* Để tránh đụng vào header */
+}
+/* doi phong nen table  */
+.custom-table {
+    background-image: url('./image/anh1.jpg');
+    background-size: cover;
+    color: rgb(15, 14, 14); /* Màu chữ */
+    font-family: 'Arial', sans-serif; /* Font chữ */
+}
+.custom-table th, .custom-table td {
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Độ đậm chữ */
+}
+footer {
+    margin-top: 20px;
+    background-color: #ecde426a;
+    text-align: center;
+    padding: 10px;
+    color: #080808; /* Màu chữ trắng cho phần footer */
+    font-family: 'Arial', sans-serif; /* Font chữ */
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Độ đậm của chữ */
+}
+.logo img {
+    max-width: 100%; /* Đảm bảo hình ảnh trong logo không bị tràn ra ngoài */
+}

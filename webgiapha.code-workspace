@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../webgiapha"
+		},
+		{
+			"path": "C:/Users/nhatt/OneDrive/Máy tính/CNTT1_Ma_Nguyen_Nhat_Tan__baocao"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "webgiapha",
+		"liveServer.settings.port": 5501
+	}
+}
