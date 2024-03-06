@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./anh_truyen/logo1.png">
-    <title>Đăng nhập đọc truyện online</title>
+    <title>Đăng nhập </title>
     <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
     
@@ -20,13 +20,54 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="dangky1.css" />
+    <link rel="stylesheet" href="btnback.css">
     <!-- font roboto -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
+  <style>
+    body {
+      background-image: url('./image/hinh_15.jpg');
+      background-size: cover;
+      background-position: center; 
+    }
+    .login__container {
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3); 
+      border-radius: 10px;
+      background: rgba(255,255,255,0.8);
+      
+      transition: transform 0.5s; 
+    }
+    
+    .login__container:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      animation: pulsate 1.5s ease-in-out infinite;
+   }
+   
+   @keyframes pulsate {
+     0% {
+       box-shadow: 
+        0 0 25px #bccd95,
+        0 0 50px #a2cf64;
+     }
+
+     h1 {
+      background: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+    }
+   }
+  </style>
   <body>
+    <button id="backButton" onclick="goBack()">
+      <i class="fas fa-arrow-left"></i> 
+  </button>  <!-- Thêm nút quay về -->
     <!-- from login -->
     <div class="login">
       <div class="login__container">
@@ -44,7 +85,7 @@
         >
       </div>
     </div>
-    <script src="main.js"></script>
+    <script src="dangnhap.js"></script>
   </body>
-  
+  <script src="btnback.js"></script>
 </html>

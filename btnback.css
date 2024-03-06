@@ -1,0 +1,25 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+} */
+
+#backButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #a1e698;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#backButton:hover {
+    background-color: #b3b13e;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

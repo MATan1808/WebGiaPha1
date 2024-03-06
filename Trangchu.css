@@ -1,0 +1,26 @@
+.container {
+    padding-top: 20px;
+}
+
+.navbar-brand img {
+    width: 190px;
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item:hover {
+    transform: scale(1.1);
+}
+
+.nav-link {
+    color: rgb(14, 15, 15);
+}

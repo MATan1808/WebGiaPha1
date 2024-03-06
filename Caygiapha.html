@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cay Gia Pha</title>
     <link rel="stylesheet" href="Caygiapha.css">
+    <link rel="stylesheet" href="Chatbot.css">
     <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="btnback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
     </style>
@@ -17,6 +20,9 @@
 <body>
     <div class="container-fluide" style="background-color:  #ecde429e;">
         <div class="container">
+            <button id="backButton" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i> 
+            </button>
             <div class="row">
                 <div class="col-lg-2 " style="padding-left: -12px;">
                     <a href="Trangchu.html">
@@ -146,5 +152,27 @@
       </ul>
     </div>
   </footer>
+      <!-- Chatbox Icon -->
+      <div class="chat-icon" id="chat-icon">
+        <!-- <i class="fab fa-facebook-messenger fa-spin"></i> -->
+        <!-- <i class="fab fa-teamspeak" style="color: #B197FC;"></i> -->
+        <i class="fab fa-teamspeak fa-lg-spin" style="color: #B197FC;"></i>
+    </div>
   
+    <div class="chat-window" id="chat-window">
+        <div class="chat-window-header">
+          <h2 style="text-shadow: 2px 2px 5px rgb(29, 26, 26); color: rgb(225, 29, 29); animation: shake 0.5s ease-in-out 0s infinite alternate;">TanMa.com</h2>
+            <button id="close-button">&times;</button>
+        </div>
+        <div class="chat-window-body" id="chat-window-body">
+            <!-- Nội dung chat sẽ được thêm vào đây -->
+        </div>
+        <div class="chat-window-footer">
+            <input type="text" id="window-message-input" placeholder="Nhập tin nhắn..." />
+            <button id="window-send-button">Gửi</button>
+        </div>
+    </div>
+  
+    <script src="chatbot.js"></script>
+    <script src="btnback.js"></script>
 </html>

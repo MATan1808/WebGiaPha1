@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TrangChu</title>
+    <link rel="stylesheet" href="chatbot.css">
     <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -12,6 +13,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="btnback.css">
+    <link rel="stylesheet" href="Trangchu.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
     .sp{width: 300px; margin: 10px; position: relative;float:left;overflow: hidden;}
             .sp img{width: 100%;transition: transform 3s;}
@@ -27,34 +33,39 @@
 <body>
 
   <div class="container-fluide" style="background-color:  #f6fdc3;">
+     <!-- Thêm nút quay về -->
+     <button id="backButton" onclick="goBack()">
+      <i class="fas fa-arrow-left"></i> 
+  </button>  <!-- Thêm nút quay về -->
+
     <div class="container" >
-      <div class="row" >
-        <div class="col-lg-6 " style="padding-left: 0px;" >
-          <a href="Admin.html">
-            <img src="./image/logo.gif" width="190" height="100"   >
-        </a>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="Admin.html">
+                <img src="./image/logo.gif" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dn.html">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dk.html">Đăng ký</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col-lg-6"  >
-            
-            <ul class="nav" >
-                <li >
-                    <a class="nav-link  " style="color: rgb(14, 15, 15)   ;" href="#">Trang chủ</a>
-                </li>
-                <li >
-                    <a class="nav-link"style="color: rgb(14, 15, 15)  ;" href="#">Giới thiệu</a>
-                </li>
-               
-                </li>
-                <li >
-                    <a class="nav-link" style="color: rgb(7, 7, 7)   ;"href="dn.html">Đăng nhập</a>
-                </li>
-                <li >
-                  <a class="nav-link" style="color: rgb(12, 12, 12)   ;"href="dk.html">Đăng ký</a>
-              </li>
-            </ul>
-  
-        </div>
-    </div>
+    </nav>
 </div>
        
           <!-- anh backgourd -->
@@ -359,6 +370,33 @@ Phần mềm cao cấp với tính bảo mật cao, bảo vệ thông tin khách
     </div>
   
 </div>
-</div>               
+</div>    
+<!-- Chatbox Placeholder -->
+    <!-- Your page content goes here -->
+
+    <!-- Chatbox Icon -->
+    <div class="chat-icon" id="chat-icon">
+      <!-- <i class="fab fa-facebook-messenger fa-spin"></i> -->
+      <!-- <i class="fab fa-teamspeak" style="color: #B197FC;"></i> -->
+      <i class="fab fa-teamspeak fa-lg-spin" style="color: #B197FC;"></i>
+  </div>
+
+  <div class="chat-window" id="chat-window">
+      <div class="chat-window-header">
+        <h2 style="text-shadow: 2px 2px 5px rgb(29, 26, 26); color: rgb(225, 29, 29); animation: shake 0.5s ease-in-out 0s infinite alternate;">TanMa.com</h2>
+          <button id="close-button">&times;</button>
+      </div>
+      <div class="chat-window-body" id="chat-window-body">
+          <!-- Nội dung chat sẽ được thêm vào đây -->
+      </div>
+      <div class="chat-window-footer">
+          <input type="text" id="window-message-input" placeholder="Nhập tin nhắn..." />
+          <button id="window-send-button">Gửi</button>
+      </div>
+  </div>
+
+  <script src="chatbot.js"></script>
+  <script src="btnback.js"></script>
 </body>
+
 </html>

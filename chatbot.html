@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Chat Box Example</title>
+</head>
+<body>
+
+    <!-- Your page content goes here -->
+
+    <!-- Chatbox Icon -->
+    <div class="chat-icon" id="chat-icon">
+        <i class="fas fa-comment"></i>
+    </div>
+
+    <!-- Chatbox Window -->
+    <div class="chat-window" id="chat-window">
+        <div class="chat-window-header">
+            <h2>Chat Box</h2>
+            <button id="close-button">&times;</button>
+        </div>
+        <div class="chat-window-body" id="chat-window-body">
+            <!-- Chat messages will be appended here -->
+        </div>
+        <div class="chat-window-footer">
+            <input type="text" id="window-message-input" placeholder="Nhập tin nhắn..." />
+            <button id="window-send-button">Gửi</button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>

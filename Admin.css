@@ -1,11 +1,38 @@
+
+.nav {
+    margin-left: 135px;
+}
+.taikhoan{
+    margin-left:160px;
+    text-decoration: none; /* Loại bỏ gạch chân */
+    margin-top: 30px;
+    color: black;       /* Màu chữ đen */
+    font-size: 18px;    /* Kích thước chữ 18px */
+    
+}
+.nav-link {
+    transition: color 0.3s ease-in-out;
+}
+.nav-link:hover{
+    font: 1em sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red !important;
+}
+/* Thêm box shadow và màu khi hover cho .nav-link */
+.nav-link:hover {
+    color: #daa658;
+    /* Màu khi hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Hiệu ứng shadow khi hover */
+}
 /* Định dạng cho các thẻ a và li trong thẻ ul có class là "nav" */
 .nav li a {
     color: black;       /* Màu chữ đen */
     font-size: 18px;    /* Kích thước chữ 18px */
-    margin-right: 20px; /* Khoảng cách phải giữa các mục menu */
+    margin-right: -20px; /* Khoảng cách phải giữa các mục menu */
     text-decoration: none; /* Loại bỏ gạch chân */
 }
-
+.nav 
 /* Định dạng khi hover */
 .nav li a:hover {
     color: blue;        /* Màu chữ khi di chuột qua */
@@ -24,7 +51,6 @@
 }
 
 .nav {
-    float: left;
     margin-top: 20px; /* Để tránh đụng vào header */
 }
 
