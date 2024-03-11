@@ -1,0 +1,5 @@
+.main{
+    float: left;
+    width: calc(100% - 100px);
+    padding: 0px 50px;
+}
