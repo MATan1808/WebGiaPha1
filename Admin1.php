@@ -15,7 +15,7 @@ if(isset($_SESSION['role']) && $_SESSION['role'] == 1) {
 } 
 // Kiểm tra role là 0
 elseif(isset($_SESSION['role']) && $_SESSION['role'] == 0) {
-    header('location: Trangchu.html');
+    header('location: Trangchudn.html');
     exit();
 } 
 // Nếu không phải admin hoặc user thông thường, chuyển hướng đến trang login

@@ -27,7 +27,7 @@ if(isset($_POST['dangnhap'])) {
           exit;
       } elseif($role == 0) {
           $_SESSION['role'] = $role;
-          header('location: Trangchu.html');
+          header('location: Trangchudn.html');
           exit;
       } else {
           $txt_erro = "Tên đăng nhập hoặc mật khẩu không đúng";
@@ -125,7 +125,7 @@ if(isset($_POST['dangnhap'])) {
             }
             ?>
         </form>
-        <a href="./dk.php" class="login__registerButton"
+        <a href="./reg.php" class="login__registerButton"
           >Đăng ký tài khoản mới</a
         >
       </div>

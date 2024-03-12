@@ -102,5 +102,6 @@ if(isset($_POST['btn-reg'])){
   
   
 </body>
+<script src="btnback.js"></script>
 </html>
 

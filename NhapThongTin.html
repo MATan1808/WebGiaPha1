@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký </title>
+  <!-- Các thẻ link và script khác -->
+
+  <!-- Thêm link đến file CSS của trang đăng ký -->
+  <link rel="stylesheet" href="dangky1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="btnback.css">
+    <!-- Liên kết đến trang PHP để xử lý đăng ký -->
+</head>
+<body>
+  <button id="backButton" onclick="goBack()">
+    <i class="fas fa-arrow-left"></i> 
+</button>  <!-- Thêm nút quay về -->
+  <!-- Form đăng ký -->
+  <div class="signup">
+    <div class="signup__container">
+      <h1 >Thông tin chi tiết</h1>
+      <form action="reg.php" method="post">
+        <h5>Họ và tên</h5>
+        <input type="text" name="name" class="input-signup-username" />
+        <h5>Email</h5>
+        <input type="text " name="email" class="input-signup-password" />
+        <h5>Địa chỉ</h5>
+        <input type="Text " name="address" class="input-signup-pass" />
+       
+        <h5>Ngày tháng năm sinh *</h5>
+        <input type="date" name="birthday" class="input-signup-intro-code" />
+        <h5>Ngày tháng năm mất (nếu có)</h5>
+        <input type="date" name="date_of_death" class="input-signup-intro-code" />
+        <h5 style="margin-bottom: 5px;">Giới tính</h5>
+        <select name="gender" class="input-signup-intro-code">
+          <option value="male">Nam</option>
+          <option value="female">Nữ</option>
+          <option value="other">Khác</option>
+        </select>
+        <h5 style="margin-top: 20px;">Số điện thoại</h5>
+        <input type="text" class="input-signup-intro-code" />
+        <h5>Hình ảnh</h5>
+        <input type="file" class="input-signup-intro-code" />
+        <h5>Tiểu sử</h5>
+        <textarea class="input-signup-intro-code"></textarea>
+        <input style="margin-top: 20px;" type="submit" name="giftcode" class="signup__signInButton" name="btn-reg" value="Lưu thông tin">
+       
+      </form>
+      <!-- Thêm liên kết đến trang đăng nhập -->
+    
+    </div>
+  </div>
+  
+
+</body>
+</html>
