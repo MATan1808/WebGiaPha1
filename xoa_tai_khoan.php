@@ -9,12 +9,12 @@ if (isset($_GET['id'])) {
     $sql = "DELETE FROM tbl_user WHERE id = $userId";
     $result = mysqli_query($conn, $sql);
 
-    if ($result) {
-        echo "Xóa thành công";
-    } else {
-        echo "Lỗi khi xóa: " . mysqli_error($conn);
-    }
+    // if ($result) {
+    //     echo "Xóa thành công moi ";
+    // } else {
+    //     echo "Lỗi khi xóa: " . mysqli_error($conn);
+    // }
 } else {
-    echo "ID không hợp lệ";
+    echo "USER không hợp lệ";
 }
 ?>

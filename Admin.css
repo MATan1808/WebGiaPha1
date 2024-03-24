@@ -1,83 +1,136 @@
-
-.nav {
-    margin-left: 135px;
-}
-.taikhoan{
-    margin-left:160px;
-    text-decoration: none; /* Loại bỏ gạch chân */
-    margin-top: 30px;
-    color: black;       /* Màu chữ đen */
-    font-size: 18px;    /* Kích thước chữ 18px */
-    
-}
-.nav-link {
-    transition: color 0.3s ease-in-out;
-}
-.nav-link:hover{
-    font: 1em sans-serif;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: red !important;
-}
-/* Thêm box shadow và màu khi hover cho .nav-link */
-.nav-link:hover {
-    color: #daa658;
-    /* Màu khi hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    /* Hiệu ứng shadow khi hover */
-}
-/* Định dạng cho các thẻ a và li trong thẻ ul có class là "nav" */
-.nav li a {
-    color: black;       /* Màu chữ đen */
-    font-size: 18px;    /* Kích thước chữ 18px */
-    margin-right: -20px; /* Khoảng cách phải giữa các mục menu */
-    text-decoration: none; /* Loại bỏ gạch chân */
-}
-.nav 
-/* Định dạng khi hover */
-.nav li a:hover {
-    color: blue;        /* Màu chữ khi di chuột qua */
-}
-.container-fluide {
-    position: relative;
-    z-index: 1; /* Đặt z-index để nằm trên cùng */
+/* Áp dụng phong cách tổng thể */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eed3d9; /* Màu nền chung cho toàn trang */
+    color: #333333; /* Màu chữ chung, màu tối để tăng độ tương phản */
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    background-color: #ecde426a;
+/* Header styles */
+.header-container {
+    background-color: #b5c0d0; /* Màu nền header */
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa các thành phần trong header */
 }
 
+/* Logo styles */
 .logo {
-    margin-top: 20px; /* Để tránh đụng vào header */
+    display: inline-block;
+    background: url('./image/logo_web.png') no-repeat center center;
+    background-size: contain; /* Điều chỉnh kích thước background nếu cần */
+    width: 190px; /* Chiều rộng logo */
+    height: 100px; /* Chiều cao logo */
+    text-decoration: none; /* Xóa gạch chân */
 }
 
+/* Đảm bảo text trong thẻ 'a' không hiển thị */
+.logo a {
+    display: inline-block;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+/* Link và Navigation styles */
 .nav {
-    margin-top: 20px; /* Để tránh đụng vào header */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Phân bổ đều các item */
 }
 
-.table-container {
-    margin-top: 20px; /* Để tránh đụng vào header */
+.nav-link {
+    padding: 10px 15px;
+    color: #5c5c5c;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    border-radius: 4px; /* Thêm góc bo tròn */
 }
-/* doi phong nen table  */
-.custom-table {
-    background-image: url('./image/anh1.jpg');
-    background-size: cover;
-    color: rgb(15, 14, 14); /* Màu chữ */
-    font-family: 'Arial', sans-serif; /* Font chữ */
+
+.nav-link:hover {
+    color: #ccd3ca;
+    background-color: #f5e8dd; /* Màu nền khi hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng mờ nhẹ */
 }
-.custom-table th, .custom-table td {
-    font-size: 16px; /* Kích thước chữ */
-    font-weight: bold; /* Độ đậm chữ */
-}
-footer {
+
+/* Bảng và nút styles */
+.table-custom {
+    background-color: transparent; /* Đặt nền trong suốt cho bảng */
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Tạo khoảng cách giữa các hàng */
+    width: 100%;
     margin-top: 20px;
-    background-color: #ecde426a;
-    text-align: center;
-    padding: 10px;
-    color: #080808; /* Màu chữ trắng cho phần footer */
-    font-family: 'Arial', sans-serif; /* Font chữ */
-    font-size: 16px; /* Kích thước chữ */
-    font-weight: bold; /* Độ đậm của chữ */
 }
-.logo img {
-    max-width: 100%; /* Đảm bảo hình ảnh trong logo không bị tràn ra ngoài */
+
+.table-custom th, .table-custom td {
+    border: none; /* Xóa đường viền */
+    background-color: #ffffff; /* Màu nền cho các ô */
+    padding: 15px;
+    text-align: left; /* Căn trái nội dung */
+}
+
+.table-custom th {
+    background-color: #ccd3ca; /* Màu nền cho header của bảng */
+    color: #333; /* Màu chữ cho header của bảng */
+    text-transform: uppercase; /* Chữ in hoa cho header */
+}
+
+.table-custom td {
+    color: #333; /* Màu chữ cho các ô */
+    border-bottom: 2px solid #eed3d9; /* Đường kẻ phân cách nhẹ */
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold; /* Làm đậm chữ trong nút */
+    text-transform: uppercase; /* Chữ in hoa cho nút */
+    transition: all 0.3s ease; /* Chuyển động mượt mà cho trạng thái hover */
+}
+
+.btn-danger {
+    background-color: #db7c8c;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c46677; /* Màu tối hơn khi hover */
+}
+
+.btn-warning {
+    background-color: #dbba7c;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background-color: #c9a766; /* Màu tối hơn khi hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #b5c0d0;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em; /* Giảm kích thước chữ cho footer */
+}
+.account-icon {
+    background: url('./image/logo_web.png') no-repeat center center / cover;
+    width: 50px; /* Đặt chiều rộng của hình ảnh */
+    height: 50px; /* Đặt chiều cao của hình ảnh */
+    border-radius: 50%; /* Làm cho hình ảnh trở thành hình tròn */
+    display: inline-block; /* Cho phép hình ảnh hiển thị cùng dòng với văn bản */
+    vertical-align: middle; /* Căn giữa hình ảnh với văn bản */
+    margin-right: 10px; /* Tạo khoảng cách giữa hình ảnh và văn bản */
+}
+
+.account-text {
+    display: inline-block;
+    vertical-align: middle;
 }
