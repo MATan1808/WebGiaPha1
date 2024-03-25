@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="Chatbot.css">
     <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
-      <link rel="stylesheet" href="btnback.css">
+    <link rel="stylesheet" href="btnback.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
@@ -21,7 +21,7 @@
     <div class="container-fluide" style="background-color:  #ecde429e;">
         <div class="container">
             <button id="backButton" onclick="goBack()">
-                <i class="fas fa-arrow-left"></i> 
+                <i class="fas fa-arrow-left"></i>
             </button>
             <div class="row">
                 <div class="col-lg-2 " style="padding-left: -12px;">
@@ -58,69 +58,70 @@
         <div class="rounded-box">
             <div class="thanhdecu" <a href="#" class="l" style=" color: white;
                     text-decoration: none;">
-                <h2 style="color: rgba(133, 9, 9, 0.726); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Các cây gia phả họ Trần </h2>
+                <h2
+                    style="color: rgba(133, 9, 9, 0.726); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    Các cây gia phả họ Trần </h2>
                 </a>
             </div>
         </div>
     </div>
-    <div class="container-fluide" style="background-color:  #ecde429e;">
+    <div class="container-fluid" style="background-color: #ecde429e;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="rectangle-frame">
-                        <!-- <p>This is your decorated rectangle frame.</p> -->
-                        <div class="row"style="display: flex; justify-content:center">
-                            <div class="row-lg-12">
-                                <a href="hienthithongtinchitiet.html">
-                                <div class="node" id="TranThaiTong" >
-                                    <img src="./image/TranThaiTong.jpeg" alt="Person A">
-                                    <p class="thongtin" style="font-size: 25px;">Vua Trần Thái Tông</p>
-                                    <p style="margin-top: -20px;">(1218–1277)</p>
-                                    <p>Vai vế: Chồng</p>
-                                    <button class="btn btn-primary edit-button" onclick="editInfo('personA')">Chỉnh sửa</button>
+                        <div class="generation-grid">
+                            <!-- Generation Node 1 -->
+                            <div class="generation-node" id="TranThaiTong">
+                                <img src="./image/TranThaiTong.jpeg" alt="Vua Trần Thái Tông">
+                                <div class="generation-info">
+                                    <h3 class="generation-name">Vua Trần Thái Tông</h3>
+                                    <p class="generation-lifespan">(1218–1277)</p>
+                                    <button class="btn btn-primary view-more-button" onclick="editInfo('personA')">xem
+                                        thêm</button>
+                                </div>
                             </div>
-                                </a>
-                        </div>
-                    </div>
 
-                    <div class="row"style="display: flex; justify-content:center">
-                        <div class="row-lg-12">
-                            <div class="node" id="ThaiHayLyThanhTong" >
-                                <img src="./image/VoTranNhanTong.jpg" alt="Person B" width="200" height="140">
-                                <p class="thongtin" style="font-size: 25px;">Thái hậu Lý Thánh Tông</p>
-                                <P style="margin-top: -20px;">(???)</P>
-                                <p>Vai vế: Vợ</p>
-                                <button class="btn btn-primary edit-button" onclick="editInfo('personA')">Chỉnh sửa</button>
-                               
+                            <!-- Repeat for other generation nodes -->
+                            <!-- Ô thế hệ hiện tại 2 -->
+                            <div class="generation-node" id="TranAnhTong">
+                                <img src="./image/VoTranNhanTong.jpg" alt="Vua Trần Anh Tông">
+                                <div class="generation-info">
+                                    <h3 class="generation-name">Vua Trần Anh Tông</h3>
+                                    <p class="generation-lifespan">(1258–1308)</p>
+                                    <button class="btn btn-primary view-more-button">xem thêm</button>
+                                </div>
                             </div>
-                    </div>
-                </div>
 
-                <div class="row"style="display: flex; justify-content:center">
-                    <div class="row-lg-12">
-                        <div class="node" id="TranNhanTong" >
-                            <img src="./image/TranNhanTong.jpg" alt="Vua Trần Nhân Tông"width="200" height="140">
-                            <p class="thongtin"style="font-size: 25px;"> Vua Trần Nhân Tông</p>
-                            <P style="margin-top: -20px;">(1258–1308)</P>
-                            <p>Vai vế: Thái tử</p>
-                            <button class="btn btn-primary edit-button" onclick="editInfo('personA')">Chỉnh sửa</button>
-                            <div class="connecting-line"></div>
+                            <!-- Ô thế hệ mới 3 -->
+                            <div class="generation-node" id="newGeneration3">
+                                <img src="./image/TranNhanTong.jpg" alt="Vua Trần Nhân Tông">
+                                <div class="generation-info">
+                                    <h3 class="generation-name">Vua Trần Nhân Tông</h3>
+                                    <p class="generation-lifespan">(1279–1330)</p>
+                                    <button class="btn btn-primary view-more-button">xem thêm</button>
+                                </div>
+                            </div>
+
+                            <!-- Ô thế hệ mới 4 -->
+                            <div class="generation-node" id="newGeneration4">
+                                <img src="./image/LyChieuHoang.jpg" alt="Thêm thông tin mới">
+                                <div class="generation-info">
+                                    <h3 class="generation-name">Tên Thế Hệ Mới</h3>
+                                    <p class="generation-lifespan">(Năm Sinh–Năm Mất)</p>
+                                    <button class="btn btn-primary view-more-button">xem thêm</button>
+                                </div>
+                            </div>
+
+                            <!-- Generation Node to Add New Entry -->
+                            <div class="generation-node new-generation" id="addNew">
+                                <img src="./image/plus.png" alt="Thêm ô mới" class="add-new-icon">
+                                <div class="generation-info">
+                                    <h3 class="generation-name">Thêm ô mới</h3>
+                                    <button class="btn btn-primary add-new-button" onclick="showForm()">Tạo</button>
+                                </div>
+                            </div>
                         </div>
-                </div>
-            </div>
-            <div class="row"style="display: flex; justify-content:start">
-                <div class="row-lg-12">
-                    <div class="node" id="LyPhatKim" >
-                        <img src="./image/LyChieuHoang.jpg" alt=" Thái hậu: Lý Phật Kim."width="200" height="140">
-                        <p class="thongtin"style="font-size: 25px;"> Thái hậu: Lý Phật Kim.</p>
-                        <P style="margin-top: -20px;">(???)</P>
-                        <p>Vai vế: Vợ </p>
-                        <button class="btn btn-primary edit-button" onclick="editInfo('personA')">Chỉnh sửa</button>
-                        <!-- <div class="connecting-line"></div> -->
-                    </div>
-            </div>
-        </div>
-            <!-- thêm người ở đây  -->
                     </div>
                 </div>
             </div>
@@ -132,47 +133,50 @@
 </body>
 <footer>
     <div class="container">
-      <p class="copyright">Copyright &copy; 2023 Ma Nguyễn Nhật Tân</p>
-      <ul class="social-media">
-        <li>
-          <a href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </li>
-      </ul>
+        <p class="copyright">Copyright &copy; 2023 Ma Nguyễn Nhật Tân</p>
+        <ul class="social-media">
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </li>
+        </ul>
     </div>
-  </footer>
-      <!-- Chatbox Icon -->
-      <div class="chat-icon" id="chat-icon">
-        <!-- <i class="fab fa-facebook-messenger fa-spin"></i> -->
-        <!-- <i class="fab fa-teamspeak" style="color: #B197FC;"></i> -->
-        <i class="fab fa-teamspeak fa-lg-spin" style="color: #B197FC;"></i>
+</footer>
+<!-- Chatbox Icon -->
+<div class="chat-icon" id="chat-icon">
+    <!-- <i class="fab fa-facebook-messenger fa-spin"></i> -->
+    <!-- <i class="fab fa-teamspeak" style="color: #B197FC;"></i> -->
+    <i class="fab fa-teamspeak fa-lg-spin" style="color: #B197FC;"></i>
+</div>
+
+<div class="chat-window" id="chat-window">
+    <div class="chat-window-header">
+        <h2
+            style="text-shadow: 2px 2px 5px rgb(29, 26, 26); color: rgb(225, 29, 29); animation: shake 0.5s ease-in-out 0s infinite alternate;">
+            TanMa.com</h2>
+        <button id="close-button">&times;</button>
     </div>
-  
-    <div class="chat-window" id="chat-window">
-        <div class="chat-window-header">
-          <h2 style="text-shadow: 2px 2px 5px rgb(29, 26, 26); color: rgb(225, 29, 29); animation: shake 0.5s ease-in-out 0s infinite alternate;">TanMa.com</h2>
-            <button id="close-button">&times;</button>
-        </div>
-        <div class="chat-window-body" id="chat-window-body">
-            <!-- Nội dung chat sẽ được thêm vào đây -->
-        </div>
-        <div class="chat-window-footer">
-            <input type="text" id="window-message-input" placeholder="Nhập tin nhắn..." />
-            <button id="window-send-button">Gửi</button>
-        </div>
+    <div class="chat-window-body" id="chat-window-body">
+        <!-- Nội dung chat sẽ được thêm vào đây -->
     </div>
-  
-    <script src="chatbot.js"></script>
-    <script src="btnback.js"></script>
+    <div class="chat-window-footer">
+        <input type="text" id="window-message-input" placeholder="Nhập tin nhắn..." />
+        <button id="window-send-button">Gửi</button>
+    </div>
+</div>
+
+<script src="chatbot.js"></script>
+<script src="btnback.js"></script>
+
 </html>

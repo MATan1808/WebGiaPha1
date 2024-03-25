@@ -127,7 +127,7 @@ p {
     left: 50%;
     width: 2px;
     height: 100px;
-    background-color: #007bff;
+    background-color: #9bb6d4;
     transform: translateX(-50%);
     z-index: -1;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -258,4 +258,132 @@ footer {
   .social-media a i:hover {
     transform: scale(1.2);
   }
-    
+/* dieu chinh  */
+/* Grid container */
+.generation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cột với kích thước bằng nhau */
+    grid-gap: 20px; /* khoảng cách giữa các ô */
+    margin-bottom: 20px; /* khoảng cách phía dưới container grid */
+}
+
+/* Các ô bên trong grid */
+.generation-box {
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center; /* Căn giữa nội dung */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Đặt chiều cao tối thiểu cho mỗi ô */
+    word-wrap: break-word; /* Tự động xuống dòng nếu chữ quá dài */
+}
+
+/* Ảnh và nội dung của ô mới */
+.new-generation-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Đảm bảo các button có kích thước đồng đều */
+.generation-box button {
+    width: 100px; /* Chiều rộng cố định */
+    margin-top: 10px; /* Khoảng cách phía trên */
+}
+.rectangle-frame {
+    /* Set a min-height for the frame so it expands with content */
+    min-height: 600px;
+}
+
+.generation-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.generation-node {
+    flex: 0 1 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.generation-node img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.generation-info {
+    width: 100%;
+}
+
+.generation-name {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.generation-lifespan {
+    font-size: 18px;
+    color: #c11717;
+    margin-bottom: 10px;
+}
+
+.view-more-button,
+.add-new-button {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 152px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-more-button:hover,
+.add-new-button:hover {
+    background-color: #151617;
+}
+
+/* Make sure that the add-new-icon is visually similar to the other images */
+.add-new-icon {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.generation-box img {
+    width: 150px; /* or whatever size you prefer */
+    height: auto;
+    border-radius: 50%; /* Makes the image round */
+    border: 6px solid #ffffff; /* Adds a white border, adjust color as needed */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: Adds some shadow for depth */
+    position: relative;
+    z-index: 1;
+    max-width: 100%;   /* Ensures image does not overflow its container */
+    height: auto;      /* Keeps the aspect ratio of the image */
+    object-fit: contain; /* Ensures the image is scaled to maintain its aspect ratio while fitting within the element’s content box */
+}
+
+
+
+.generation-box::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Adjust these values to match the desired overlap */
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: url('./image/anh1.jpg'); /* Path to your frame image */
+    z-index: -1;
+}
