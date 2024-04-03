@@ -1,0 +1,304 @@
+.generation-node {
+    border: 1px solid #ddd;
+    /* Độ dày và màu sắc của viền */
+    border-radius: 10px;
+    /* Độ cong của góc */
+    padding: 20px;
+    /* Khoảng cách từ nội dung đến viền */
+    margin: 20px;
+    /* Khoảng cách giữa các ô thế hệ */
+    background-color: #fff;
+    /* Màu nền của ô thế hệ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Bóng đổ */
+    transition: box-shadow 0.3s ease;
+    /* Hiệu ứng chuyển đổi cho bóng đổ */
+}
+
+.generation-node:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Hiệu ứng bóng đổ khi di chuột qua */
+}
+
+.generation-name {
+font-size: 118px; /* Kích thước font chữ */
+color: #333233; /* Màu chữ */
+}
+
+
+.view-more-button {
+    background-color: #5d646b;
+    /* Màu nền của nút */
+    color: white;
+    /* Màu chữ của nút */
+    border: none;
+    /* Loại bỏ viền của nút */
+    padding: 5px 10px;
+    /* Kích thước của nút */
+    border-radius: 5px;
+    /* Độ cong của góc của nút */
+    cursor: pointer;
+    /* Biến con trỏ thành dấu nhấp chuột khi di chuột qua nút */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng chuyển đổi màu nền của nút */
+}
+
+.view-more-button:hover {
+    background-color: #0056b3;
+    /* Màu nền của nút khi di chuột qua */
+}
+/* fix nut xoa va xem them  */
+.generation-buttons {
+display: flex;
+justify-content: space-between;
+margin-top: 10px; /* Khoảng cách giữa nút và tên thế hệ */
+}
+
+.view-more-button,
+.delete-button {
+flex: 1; /* Chia đều không gian cho các nút */
+margin: 0 5px; /* Khoảng cách giữa các nút */
+}
+/* fix bang */
+.rectangle-frame {
+    background: linear-gradient(45deg, #ecde42b7, #200707e9);
+    border: 2px solid #200707e9;
+    border-radius: 30px;
+    padding: 20px;
+    max-width: 100%;
+    /* Chiều rộng tối đa */
+    overflow-x: auto;
+    /* Cho phép cuộn theo trục x khi cần thiết */
+    display: flex;
+    /* Sử dụng flexbox */
+    flex-wrap: wrap;
+    /* Cho phép các ô chuyển hàng tự động */
+    justify-content: space-around;
+    /* Căn giữa các ô */
+}
+
+.generation-node {
+    flex: 0 1 calc(25% - 20px);
+    /* Chiếm 25% chiều rộng với khoảng cách 20px giữa các ô */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: calc(25% - 20px);
+    /* Đặt chiều rộng tối đa cho mỗi ô */
+}
+
+/* STT */
+/* Reset giá trị ban đầu của số thứ tự */
+.generation-grid {
+    counter-reset: node-counter;
+}
+
+/* Tăng giá trị của số thứ tự mỗi khi tạo một ô */
+.generation-node::before {
+    content: counter(node-counter);
+    /* Hiển thị số thứ tự */
+    counter-increment: node-counter;
+    /* Tăng giá trị của số thứ tự */
+    display: block;
+    width: 20px;
+    /* Độ rộng của số thứ tự */
+    height: 20px;
+    /* Chiều cao của số thứ tự */
+    background-color: #007bff;
+    /* Màu của số thứ tự */
+    color: white;
+    /* Màu chữ của số thứ tự */
+    border-radius: 50%;
+    /* Làm tròn góc cho số thứ tự */
+    text-align: center;
+    /* Căn giữa số thứ tự */
+    line-height: 20px;
+    /* Chiều cao dòng của số thứ tự */
+    margin-bottom: 5px;
+    /* Khoảng cách dưới của số thứ tự */
+}
+
+/* thong bao */
+.success-message {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.success-message i {
+    margin-right: 5px;
+    /* Khoảng cách giữa biểu tượng và nội dung */
+}
+
+/* xoa */
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    /* Thêm margin để tạo khoảng cách với nút "Xem thêm" */
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* thong bao xoa */
+#delete-success-message {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* thong bao xac nhan xoa */
+.confirm-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+    /* Đảm bảo z-index cao hơn để nó nổi lên phía trên */
+}
+
+.confirm-dialog-content {
+    text-align: center;
+}
+
+.confirm-buttons {
+    margin-top: 20px;
+}
+
+.confirm-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-buttons button.confirm-yes {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.confirm-buttons button.confirm-no {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* hieu ung hien thi doi  */
+.generation-node {
+    background: linear-gradient(135deg, #ff6b6b, #8ec5fc); /* Hiệu ứng gradient */
+    border-radius: 8px; /* Bo tròn viền */
+    padding: 10px; /* Khoảng cách nội dung với viền */
+    margin-bottom: 10px; /* Khoảng cách giữa các phần tử */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiển thị bóng đổ */
+    color: #fff; /* Màu chữ trắng để tương phản */
+}
+
+.generation-node:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.generation-info {
+    padding: 20px;
+}
+
+.generation-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Màu chữ */
+}
+
+.view-more-button,
+.delete-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover,
+.delete-button:hover {
+    filter: brightness(90%);
+}
+
+.delete-button {
+    background-color: #dc3545; /* Màu nền của nút */
+    color: #fff; /* Màu chữ của nút */
+    border: none; /* Loại bỏ viền */
+    border-radius: 4px; /* Bo tròn viền */
+    padding: 8px 16px; /* Khoảng cách nội dung với viền */
+    cursor: pointer; /* Biểu tượng chuột */
+    transition: background-color 0.3s ease; /* Hiệu ứng khi di chuột */
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Hiệu ứng bóng */
+.generation-node::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    /* Đảm bảo không chặn các sự kiện chuột */
+}
+
+.generation-node:hover {
+    transform: scale(1.05);
+    /* Phóng to lên 105% kích thước ban đầu */
+    z-index: 1;
+    /* Đảm bảo các ô thế hệ phóng to được hiển thị trên cùng */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.generation-node::after {
+    /* Xóa hiệu ứng bóng trước đó và chỉ giữ lại khi hover */
+    background-image: none;
+}
+
+/* Hiệu ứng bóng khi hover */
+.generation-node:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    /* Đảm bảo không chặn các sự kiện chuột */
+}
