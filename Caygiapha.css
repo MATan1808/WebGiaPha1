@@ -69,20 +69,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.rectangle-frame {
-    background: linear-gradient(45deg, #ecde42b7, #200707e9);
-    border: 2px solid #200707e9;
-    border-radius: 30px;
-    padding: 20px;
-    width: 1000px;
-    height: 1500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 50px;
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
 
 #TranThaiTong {
     position: absolute;
